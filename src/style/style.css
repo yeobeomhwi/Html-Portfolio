@@ -8,9 +8,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     transition: background-color 1s ease .5s,color 1s ease .5s;
-    font-family: px_sans_nouveaux;
     background-color: teal;
+    /* 하단 4줄  드래그 방지 */
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
 }
+
 
 .TaskBar{
     border:  1px solid silver;
@@ -60,7 +65,7 @@ body {
     text-align: center;
 }
 .ui-desktop {
-    display: none;
+    display: flex;
     position: absolute;
     left: 0;
     top: 0;
@@ -79,7 +84,6 @@ body {
 }
 .ui-icon p{
     cursor: pointer; 
-    font-family: MSSerif; 
     color: white; 
     font-size: 10px; 
     padding-right: 2px; 
@@ -98,6 +102,11 @@ body {
     position: relative;
 }
 
-.window-body{
-    background-color: #fff;
+.title-bar{
+    cursor: move;
 }
+
+.window{
+    position: absolute;
+}
+
