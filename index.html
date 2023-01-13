@@ -51,7 +51,7 @@
             
                 <div class="title-bar-controls">
                     <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
+                    <button aria-label="Maximize" class="Maximize-on" onclick="onfullscreen()" ></button>
                     <button aria-label="Close" onclick="hide()"></button>
                 </div>
         </div>
@@ -94,19 +94,22 @@
         </div>
     </div>
     
-
-    <!-- start 버튼 메뉴바 -->
-    <div id="startmenu" class="startmenu">
-        <div class="menu-side">
-            <p>YeoBeomHwi</p>
-        </div>
-        <div>
-
-        </div>
-    </div>
     <!-- 하단 상태창  -->
     <div class="TaskBar">
-        <button class="start-button">Start</button>
+        <button class="start-button">
+            <!-- start 버튼 메뉴바 -->
+            <details>
+                <summary>Start</summary>
+                <div id="startmenu" class="startmenu" >
+                    <div class="menu-side">
+                        <p>YeoBeomHwi</p>
+                    </div>
+                    <div class="menu-window">
+                        
+                    </div>
+                </div>
+            </details>
+        </button>
         <div class="StatusBar"></div>
         <span class="time">
             <div class="clock-location"> 
