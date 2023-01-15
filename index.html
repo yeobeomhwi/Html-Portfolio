@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="src/style/reset.css">
     <link rel="stylesheet" href="src/style/style.css">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-    <script defer src="./src/style/js/Current Time/index.js"></script>
-    <script defer src="./src/style/js/Internet screen moveing/index.js"></script>
-    <script defer src="./src/style/js/Internet screen/index.js"></script>
+    <link rel="stylesheet" href="/src/style/caculator.css">
+    <script defer src="./src/style/js/Calculator/Calculator.js"></script>
+    <script defer src="./src/style/js/Current Time/CT.js"></script>
+    <script defer src="./src/style/js/Internet screen moveing/ISM.js"></script>
+    <script defer src="./src/style/js/Internet screen/IS.js"></script>
 </head>
 <body class="body">
     <!-- 바탕화면 아이콘들 -->
@@ -96,6 +98,7 @@
     
     <!-- 하단 상태창  -->
     <div class="TaskBar">
+
         <button class="start-button">
             <!-- start 버튼 메뉴바 -->
             <details>
@@ -105,11 +108,19 @@
                         <p>YeoBeomHwi</p>
                     </div>
                     <div class="menu-window">
-                        
+                        <div class="list-line"></div>
+                        <div class="menu-window-list1">
+                            <img src="/src/icon/calculator-0.png">
+                            <p>계산기</p>
+                        </div>
                     </div>
                 </div>
             </details>
+
         </button>
+
+
+
         <div class="StatusBar"></div>
         <span class="time">
             <div class="clock-location"> 
@@ -118,5 +129,51 @@
         </span>
     </div>
 
+    <!-- 계산기 -->
+    <div id="Calculator">
+
+        <article id="Calculator-top" class="title-bar">
+            <img src="/src/icon/calculator-0.png" style="width: 20px; height: 20px;">
+            <div id="Calculator-top-text"class="title-bar-text">계산기</div>
+            <div id="Calculator-top-controls"class="title-bar-controls">
+                <button aria-label="Close"></button>
+            </div>
+        </article>
+
+        <section id="Calculator-body">
+            <article id="area-display">
+                <div id="steps" class="off">0</div>
+                <div id="display">0</div>
+            </article>
+
+            <article id="area-btn">
+                <div class="nums">
+                    <button class="num" data-val="7">7</button>
+                    <button class="num" data-val="8">8</button>
+                    <button class="num" data-val="9">9</button>
+                    <button class="num" data-val="4">4</button>
+                    <button class="num" data-val="5">5</button>
+                    <button class="num" data-val="6">6</button>
+                    <button class="num" data-val="1">1</button>
+                    <button class="num" data-val="2">2</button>
+                    <button class="num" data-val="3">3</button>
+                    <button class="num" data-val="-1">+/-</button>
+                    <button class="num" data-val="0">0</button>
+                    <button class="num" data-val=".">.</button>
+                    <button id="btn_result">=</button>
+                </div>
+                <div class="ops">
+                    <button id="reset">C</button>
+                    <button class="op" data-val="/">÷</button>
+                    <button class="op" data-val="*">x</button>
+                    <button class="op" data-val="-">-</button>
+                    <button class="op" data-val="+">+</button>
+                </div>
+            </article>
+
+        </section>
+
+    </div>
+    
 </body>
 </html>

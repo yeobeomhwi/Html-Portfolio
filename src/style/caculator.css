@@ -1,0 +1,129 @@
+#Calculator button{
+    font-family:  inherit; cursor: pointer;
+}
+
+#Calculator button:hover{filter:brightness(80%)}
+#Calculator button:focus{filter:brightness(60%)}
+
+#Calculator{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: #202020;
+    font-size: 18px;
+    border: 2px solid silver;
+}
+#Calculator-top{
+    width: 295px;
+    border-bottom: 2px solid silver;
+}
+#Calculator-top-text{
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0;
+    margin-left: 10px;
+}
+
+#Calculator-body{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    background: rgba(255, 255, 255,.1);
+    border-radius: 4px;
+    box-shadow: 5px 5px 1rem rgba(0, 0, 0, .2);
+}
+#area-display{
+    position: relative;
+    width: 100%;
+    background: rgba(255, 255, 255, .1);
+    border-bottom: 1px solid rgba(0,0,0, .3);
+    text-align: right;
+}
+
+#steps{
+    position:relative;
+    width: 260px;
+    padding:1.5rem 1.25rem .5rem;
+    font-size:14px; color:rgba(255,255,255,.4);
+}
+
+#steps.off{opacity: 0;}
+
+#display{
+    display: block;
+    position: relative;
+    width: 268px;
+    height: auto;
+    white-space: normal;
+    word-break: break-all;
+    padding: 0 1rem;
+    padding-bottom: 1.25rem;
+    background: transparent;
+    text-align: left;
+    font-family: inherit;
+    font-size: 2rem;
+    color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+#area-btn{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.nums{
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    width: 75%;
+}
+
+.num{
+    display: block;
+    width: 33.33%;
+    aspect-ratio: 1/1;
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: inherit;
+    color: rgba(255, 255, 255, 1);
+}
+.num[data-val="-1"],.num[data-val="."]{
+    background: rgba(255, 255, 255, .1);
+}
+
+.ops{
+    position: relative;
+    width: 25%;
+}
+
+.op{
+    display:block;
+    width:100%; aspect-ratio:1/1;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(0,0,0,.2);
+    font-size:1.5rem; color:#fff;
+}
+#reset{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: rgba(36, 55, 165, 0.1);
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: 1rem;
+    color: #fff;
+}
+
+#btn_result{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/.33;
+    background: rgba(93, 128, 241, 0.3);
+    border: 1px solid rgba(0, 0, 0, .2);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    mix-blend-mode: hard-light;
+}

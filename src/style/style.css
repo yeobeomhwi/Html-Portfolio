@@ -229,4 +229,41 @@ summary::marker{
 .menu-window{
     width: 213px;
     display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.menu-window-list1{
+    display: flex;
+    align-items:  center;
+    height: 24px;
+    padding: 12px;
+    flex-direction: row;
+    background-color: silver;
+    cursor: pointer;
+}
+.menu-window-list1:hover{
+    background: #0000aa;
+}
+.list-line{
+    height: 1px;
+    background: #fff;
+    border-top: 1px solid rgb(134,137,141);
+}
+
+.menu-window-list1 image{
+    height: 32px;
+    width: 32px;
+    pointer-events:  none;
+    user-select: none;
+    image-rendering: pixelated;
+    padding: 12px;
+    align-items: left;
+}
+
+.menu-window-list1 p{
+    margin-left: 15px;
+    font-size: 14px;
+    
 }
