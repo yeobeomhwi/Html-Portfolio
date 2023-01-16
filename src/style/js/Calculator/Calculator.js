@@ -121,3 +121,5 @@ function reset_data(){
     data.operator = undefined;
     data.pressedResult = true;
 }//reset_data
+
+
