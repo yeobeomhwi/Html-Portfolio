@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Window</title>
-    <link rel="stylesheet" href="src/style/reset.css">
-    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/css/reset.css">
+    <link rel="stylesheet" href="src/style/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-    <link rel="stylesheet" href="/src/style/caculator.css">
+    <link rel="stylesheet" href="/src/style/css/caculator.css">
+    <link rel="stylesheet" href="/src/style/css/Internet.css">
     <script defer src="./src/style/js/Calculator/CalculatorMove.js"></script>
     <script defer src="./src/style/js/Calculator/Calculator.js"></script>
     <script defer src="./src/style/js/Current Time/CT.js"></script>
@@ -46,55 +47,38 @@
 
     <!-- 인터넷창 -->
     <div id="Internet" class="window" style="position: absolute; margin: 0px auto;">
-        <div id="Internetheader" class="title-bar">
-            <div class="title-bar-text">
-                <img width="12" height="12" src="./src/icon/msie1-0.png" alt="">
-                <p>Internet Explorer</p>
+        <div id="Internet-screen">
+            <div id="Internetheader" class="title-bar">
+                <div class="title-bar-text">
+                    <img width="12" height="12" src="./src/icon/msie1-0.png" alt="">
+                    <p>Internet Explorer</p>
+                </div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize" class="Maximize-on" onclick="onfullscreen()" ></button>
+                        <button aria-label="Close" onclick="hide()"></button>
+                    </div>
             </div>
             
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize" class="Maximize-on" onclick="onfullscreen()" ></button>
-                    <button aria-label="Close" onclick="hide()"></button>
-                </div>
-        </div>
-        <div  id="Internetbody"  class="window-body">
-            <div id="Internetbody-wrap" class="window-body-wrap">
-                <div id="wrap-outer-container" class="wrap--outer-container">
-                    <div id="wrap-inner-container" class="wrap-inner-container" style="padding: 20px; text-align: center;">
-                        <p>대충 인터넷 화면입니다.............................................................................................</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>  
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>  
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        <p>대충 인터넷 화면입니다..</p>
-                        
+            <div  id="Internetbody"  class="window-body">
+                <div id="Internetbody-wrap" class="window-body-wrap">
+                    <div id="top-container">
+                        <nav id="IE-header">
+                            <div class="header-Menu">Menu</div>
+                        </nav>
+
+                        <div id="IE-body">
+    
+                        </div>
+
+                        <div id="IE-footer">
+    
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
     
     <!-- 하단 상태창  -->
@@ -110,7 +94,7 @@
                     </div>
                     <div class="menu-window">
                         <div class="list-line"></div>
-                        <div class="menu-window-list1">
+                        <div class="menu-window-list1" onclick="Calculatorshow()">
                             <img src="/src/icon/calculator-0.png">
                             <p>계산기</p>
                         </div>
@@ -120,9 +104,17 @@
 
         </button>
 
-
-
-        <div class="StatusBar"></div>
+        <div class="StatusBar">
+            <div id="Internet-Status">
+                <div id="Internet-Status-img"></div>
+                <p>Internet Explorer</p>
+            </div>
+            <div id="Calculator-Status">
+                <div id="Calculator-Status-img"></div>
+                <p>Calculator</p>
+            </div>
+        </div>
+        <!-- 현재시간 -->
         <span class="time">
             <div class="clock-location"> 
                 <div class="main-clock"></div>  
@@ -133,11 +125,11 @@
     <!-- 계산기 -->
     <div id="Calculator">
 
-        <article id="Calculatortop" class="title-bar">
+        <article id="Calculatorheader" class="title-bar">
             <img src="/src/icon/calculator-0.png" style="width: 20px; height: 20px;">
             <div id="Calculator-top-text"class="title-bar-text">계산기</div>
             <div id="Calculator-top-controls"class="title-bar-controls">
-                <button aria-label="Close"></button>
+                <button aria-label="Close" onclick="Calculatorhide()"></button>
             </div>
         </article>
 

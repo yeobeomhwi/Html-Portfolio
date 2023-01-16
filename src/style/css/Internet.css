@@ -1,0 +1,133 @@
+#Internet{
+    position: absolute;
+    background-color: rgb(195, 198, 202);
+    width: 858px;
+    height: 820px;
+    max-height: 820px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+#Internet-screen{
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    height: 100%;
+    position: relative;
+}
+.title-bar{
+    cursor: move;
+    flex-direction: row;
+}
+.title-bar-text{
+    text-align: left;
+    display: flex;
+}
+.title-bar-text p{
+    position: absolute;
+    left: 25px;
+    top: 2px;
+    text-align: center;
+}
+
+.window-body{
+    height: 100%;
+    
+}
+
+#Internetbody-wrap{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) rgb(195, 198, 202) rgb(195, 198, 202) rgb(0, 0, 0);
+    border-image: initial;
+    align-content: center;
+    overflow-y: auto;
+    height: 782px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#Internet-Status{
+    max-width: 300px;
+    height: 20px;
+    display: none;
+    flex: 1 1 0%;
+    margin: 0px 3px ;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) rgb(255, 255, 255) rgb(255, 255, 255) rgb(0, 0, 0);
+    border-image: initial;
+    background-position-y: center;
+}
+
+#Internet-Status-img{
+    background-image: url(/src/icon/msie1-0.png);
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    display: flex;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+#Internet-Status p {
+    position: relative;
+    left: 5px;
+    font-weight: bold;
+}
+
+
+/*****************************************************************/
+
+#top-container{
+    min-height: 100vh;
+}
+#IE-header{
+    display: flex;
+    padding: 0 50px;
+    height: 50px;
+    align-items: center;
+}
+
+.header-Menu{
+    margin-top: 10px;
+    position: fixed;
+    -webkit-animation: appear-data-v-63e401ac 1s ease;
+    animation: appear-data-v-63e401ac 1s ease;
+    right: 77px;
+    z-index: 99;
+    transition: .5s ease-in-out;
+    mix-blend-mode: difference;
+    color: #fff;
+    cursor: pointer;
+
+}
+#IE-body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: blue;
+    margin-left: 16px;
+    margin-right: 16px;
+    height:100%;
+    margin-top: 10px;
+}
+
+#IE-footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: blue;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 10px;
+}

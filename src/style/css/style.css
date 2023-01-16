@@ -93,8 +93,11 @@ body {
 }
 
 .StatusBar{
+    flex-direction: column;
+    display: flex;
     width: 100%;
-    flex-grow: 3;
+    flex-direction: row;
+    justify-content:  flex-start;
 }
 
 .time{
@@ -118,55 +121,6 @@ body {
     font-weight: var( --weight-bold);
 }
 
-/*--------------------------------------------------------------------------------------*/
-
-.title-bar{
-    cursor: move;
-}
-.title-bar-text{
-    text-align: left;
-    flex-grow: 1;
-    display: flex;
-    
-}
-
-.window-body{
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    background-color: #fff;
-}
-#Internet{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-}
-.wrap-outer-container{
-    border-left: 1px solid #dfdfdf;
-    border-top: 1px solid #dfdfdf;
-    border-right: 1px solid #7f7f7f;
-    border-bottom: 1px solid #7f7f7f;
-    padding: 10px;
-    margin: 0;
-    overflow: auto;
-}
-
-.wrap-inner-container{
-    border-left: 2px solid #404040;
-    border-top: 2px solid #404040;
-    border-right: 2px solid #f4f4f4;
-    border-bottom: 2px solid #f4f4f4;
-    background: #fff;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-}
 
 /*----------------------------------------------------------------*/
 details {

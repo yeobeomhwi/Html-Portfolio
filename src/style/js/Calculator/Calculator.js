@@ -110,7 +110,7 @@ function show_finalStep(){
     const cacul_str = `${data.prev} ${operator_to_string()} ${data.curr}`;
     $steps.textContent = `${cacul_str} =`;
 }//show_finalStep
- 
+
 /* 리셋 */
 function reset_data(){
     data.prev = '';
@@ -123,3 +123,13 @@ function reset_data(){
 }//reset_data
 
 
+function Calculatorhide(){
+    document.getElementById("Calculator").style.display='none';
+    document.getElementById("Calculator-Status").style.display='none';
+}
+
+
+function Calculatorshow() {
+    document.getElementById("Calculator").style.display='flex';
+    document.getElementById("Calculator-Status").style.display='flex';
+}
