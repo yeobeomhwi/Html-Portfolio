@@ -1,3 +1,20 @@
+element = document.getElementById("InternetExplore");
+element2 = document.getElementById("Internet");
+element3 = document.getElementById("IEClose");
+
+element.addEventListener("click", function(e) {
+    document.getElementById("Internet").style.display='flex';
+    document.getElementById("Internet-Status").style.display='flex';
+}, false);
+
+
+element3.addEventListener("click", function(e) {
+    document.getElementById("Internet").style.display='none';
+    document.getElementById("Internet-Status").style.display='none';
+}, false);
+
+
+
 // Make the DIV element draggable:
 dragElement(document.getElementById("Internet"));
 

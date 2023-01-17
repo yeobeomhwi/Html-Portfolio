@@ -1,0 +1,46 @@
+nav{
+    box-sizing: border-box;
+}
+#top-container{
+    min-height: 100vh;
+}
+#IE-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0 50px;
+    height: 116px;
+    align-items: center;
+    background-color: aqua;
+}
+
+.header1{
+    flex: 1;
+    background-position: left;
+    position: fixed;
+    z-index: 99;
+    mix-blend-mode: difference;
+    left: 42px;
+    cursor: pointer;
+}
+
+.header2{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 99;
+    position: fixed;
+    mix-blend-mode: difference;
+    flex: 3;
+    text-align: center;
+}
+.header3{
+    flex: 1;
+    text-align: right;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    right: 77px;
+    mix-blend-mode: difference;
+
+}

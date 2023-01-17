@@ -1,0 +1,8 @@
+#IE-footer{
+    background-color: #070f15;
+    width: 100%;
+    padding: 120px 0 100px;
+    z-index: 1;
+    position: relative;
+    color: hsla(0,0%,100%,.87);
+}

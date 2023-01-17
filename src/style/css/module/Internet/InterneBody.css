@@ -1,0 +1,9 @@
+#IE-body{
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: blue;
+    margin-left: 16px;
+    margin-right: 16px;
+    min-height:100%;
+}

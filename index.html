@@ -5,16 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Window</title>
-    <link rel="stylesheet" href="src/style/css/reset.css">
-    <link rel="stylesheet" href="src/style/css/style.css">
+    <link rel="stylesheet" href="src/style/css/module.css">
     <link rel="stylesheet" href="https://unpkg.com/98.css">
-    <link rel="stylesheet" href="/src/style/css/caculator.css">
-    <link rel="stylesheet" href="/src/style/css/Internet.css">
-    <script defer src="./src/style/js/Calculator/CalculatorMove.js"></script>
     <script defer src="./src/style/js/Calculator/Calculator.js"></script>
     <script defer src="./src/style/js/Current Time/CT.js"></script>
-    <script defer src="./src/style/js/Internet screen moveing/ISM.js"></script>
-    <script defer src="./src/style/js/Internet screen/IS.js"></script>
+    <script defer src="./src/style/js/InternetExplore/IE-event.js"></script>
+    <script defer src="./src/style/js/startbutton/startbutton.js"></script>
 </head>
 <body class="body">
     <!-- 바탕화면 아이콘들 -->
@@ -37,7 +33,7 @@
                 <p>Directory</p>
             </div>
         </div>
-        <div class="InternetExplore ui-icon" onclick="show()">
+        <div class="InternetExplore ui-icon" id="InternetExplore">
             <div class="ui-icon-container">
                 <img width="32" height="32" src="./src/icon/msie1-0.png">
                 <p>Internet Explorer</p>
@@ -56,7 +52,7 @@
                     <div class="title-bar-controls">
                         <button aria-label="Minimize"></button>
                         <button aria-label="Maximize" class="Maximize-on" onclick="onfullscreen()" ></button>
-                        <button aria-label="Close" onclick="hide()"></button>
+                        <button aria-label="Close" id="IEClose"></button>
                     </div>
             </div>
             
@@ -64,7 +60,15 @@
                 <div id="Internetbody-wrap" class="window-body-wrap">
                     <div id="top-container">
                         <nav id="IE-header">
-                            <div class="header-Menu">Menu</div>
+                            <a class="header1" id="logo"> 
+                                <img src="/src/icon/logo_text_invert.png" alt="flexweb" class="logo-text" style="height: 20px;">
+                            </a>
+                            <div class="header2">
+                                연습용 웹사이트 입니다.
+                            </div>
+                            <div class="header3" id="header-Menu">
+                                Menu
+                            </div>
                         </nav>
 
                         <div id="IE-body">
@@ -80,30 +84,29 @@
         </div>
         
     </div>
-    
+
+    <!-- 시작버튼 누르면 나올 투명 백그라운드 -->
+    <div class="startmenu-backgronud" id="startmenu-backgronud"></div>
+
     <!-- 하단 상태창  -->
     <div class="TaskBar">
-
-        <button class="start-button">
-            <!-- start 버튼 메뉴바 -->
-            <details>
-                <summary>Start</summary>
-                <div id="startmenu" class="startmenu" >
-                    <div class="menu-side">
-                        <p>YeoBeomHwi</p>
-                    </div>
-                    <div class="menu-window">
-                        <div class="list-line"></div>
-                        <div class="menu-window-list1" onclick="Calculatorshow()">
-                            <img src="/src/icon/calculator-0.png">
-                            <p>계산기</p>
-                        </div>
+        <!-- 시작버튼 -->
+        <button class="start-button" id="start-button">
+            Start
+            <div id="startmenu" class="startmenu" >            
+                <div class="menu-side">
+                    <p>YeoBeomHwi</p>
+                </div>
+                <div class="menu-window">
+                    <div class="list-line"></div>
+                    <div class="menu-window-list1" onclick="Calculatorshow();">
+                        <img src="/src/icon/calculator-0.png">
+                        <p>계산기</p>
                     </div>
                 </div>
-            </details>
-
+            </div>
         </button>
-
+        <!-- 현재상태 바 -->
         <div class="StatusBar">
             <div id="Internet-Status">
                 <div id="Internet-Status-img"></div>
